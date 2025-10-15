@@ -21,6 +21,15 @@ const Category = ({ title, score }: { title: string, score: number }) => {
     )
 }
 
+// Define the Feedback type
+type Feedback = {
+    overallScore: number;
+    toneAndStyle: { score: number };
+    content: { score: number };
+    structure: { score: number };
+    skills: { score: number };
+};
+
 const Summary = ({ feedback }: { feedback: Feedback }) => {
     return (
         <div className="bg-[#0a0a0a] rounded-2xl shadow-md w-full border border-neutral-800 glow-box text-neutral-400">

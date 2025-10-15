@@ -5,6 +5,13 @@ import {usePuterStore} from "~/lib/puter";
 import {Link, useNavigate} from "react-router";
 import {useEffect, useState} from "react";
 
+// Define or import the Resume type
+type Resume = {
+  id: string;
+  name: string;
+  value: string;
+};
+
 export function meta({}: Route.MetaArgs) {
   return [
     { title: "Ascent." },

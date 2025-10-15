@@ -1,6 +1,17 @@
 import {Link} from "react-router";
 import ScoreCircle from "~/components/ScoreCircle";
 import {useEffect, useState} from "react";
+
+// Define the Resume type
+type Resume = {
+    id: string;
+    companyName: string;
+    jobTitle: string;
+    feedback: {
+        overallScore: number;
+    };
+    imagePath: string;
+};
 import {usePuterStore} from "~/lib/puter";
 
 const ResumeCard = ({ resume: { id, companyName, jobTitle, feedback, imagePath } }: { resume: Resume }) => {
