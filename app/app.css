@@ -1,0 +1,207 @@
+@import url("https://fonts.googleapis.com/css2?family=Mona+Sans:ital,wght@0,200..900;1,200..900&display=swap");
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@theme {
+    --font-sans: "Times New Roman", Times, serif;
+    --color-dark-200: #d4d4d4;
+    --color-light-blue-100: #ffffff1a;
+    --color-light-blue-200: #e5e5e54d;
+
+    --color-badge-green: #ffffff;
+    --color-badge-red: #a3a3a3;
+    --color-badge-yellow: #d4d4d4;
+
+    --color-badge-green-text: #000000;
+    --color-badge-red-text: #1a1a1a;
+    --color-badge-yellow-text: #0a0a0a;
+}
+
+html,
+body {
+    @apply bg-black;
+    font-family: "Times New Roman", Times, serif;
+}
+
+main {
+    @apply min-h-screen pt-10;
+}
+h1 {
+    @apply text-6xl text-gradient leading-tight tracking-[-2px] font-semibold;
+    font-family: "Times New Roman", Times, serif;
+}
+
+h2 {
+    @apply text-3xl text-neutral-300;
+    font-family: "Times New Roman", Times, serif;
+}
+
+label {
+    @apply text-neutral-400;
+    font-family: "Times New Roman", Times, serif;
+}
+input {
+    @apply w-full p-4 inset-shadow rounded-2xl focus:outline-none bg-[#0a0a0a] text-white placeholder:text-neutral-600 border border-neutral-800 focus:border-white focus:glow-white transition-all duration-300;
+    font-family: "Times New Roman", Times, serif;
+}
+
+textarea {
+    @apply w-full p-4 inset-shadow rounded-2xl focus:outline-none bg-[#0a0a0a] text-white placeholder:text-neutral-600 border border-neutral-800 focus:border-white focus:glow-white transition-all duration-300;
+    font-family: "Times New Roman", Times, serif;
+}
+
+form {
+    @apply flex flex-col items-start gap-8 w-full;
+}
+
+@layer components {
+    .text-gradient {
+        @apply bg-clip-text text-transparent bg-gradient-to-r from-white via-neutral-300 to-neutral-500;
+    }
+    .gradient-border {
+        @apply bg-gradient-to-b from-light-blue-100 to-light-blue-200 p-4 rounded-2xl glow-box;
+    }
+    .primary-button {
+        @apply primary-gradient text-black rounded-full px-4 py-2 cursor-pointer w-full glow-button hover:glow-button-hover transition-all duration-300;
+        font-family: "Times New Roman", Times, serif;
+    }
+    .resume-nav {
+        @apply flex flex-row justify-between items-center p-4 border-b border-neutral-800;
+    }
+    .resume-summary {
+        @apply flex flex-row items-center justify-center p-4 gap-4;
+        .category {
+            @apply flex flex-row gap-2 items-center bg-[#0a0a0a] rounded-2xl p-4 w-full justify-between border border-neutral-800 glow-subtle hover:glow-box transition-all duration-300;
+        }
+    }
+    .back-button {
+        @apply flex flex-row items-center gap-2 border border-neutral-700 rounded-lg p-2 shadow-sm bg-[#0a0a0a]/80 text-neutral-300 hover:border-white hover:glow-subtle transition-all duration-300;
+        font-family: "Times New Roman", Times, serif;
+    }
+    .auth-button {
+        @apply primary-gradient rounded-full py-4 px-8 cursor-pointer w-[600px] max-md:w-full text-3xl font-semibold text-black glow-button hover:glow-button-hover transition-all duration-300;
+        font-family: "Times New Roman", Times, serif;
+    }
+    .main-section {
+        @apply flex flex-col items-center gap-8 pt-12 mx-15 pb-5;
+    }
+    .page-heading {
+        @apply flex flex-col items-center gap-8 max-w-4xl text-center;
+    }
+    .resumes-section {
+        @apply flex flex-wrap max-lg:flex-col gap-6 items-start w-full max-w-[1850px] justify-evenly;
+    }
+
+    .resume-card {
+        @apply flex flex-col gap-8 h-[560px] w-full lg:w-[450px] xl:w-[490px] bg-[#0a0a0a]/90 backdrop-blur-xl rounded-2xl p-4 border border-neutral-800 glow-box hover:glow-box-hover transition-all duration-500;
+    }
+
+    .resume-card-header {
+        @apply flex flex-row gap-2 justify-between min-h-[110px] max-sm:flex-col items-center max-md:justify-center max-md:items-center;
+    }
+
+    .feedback-section {
+        @apply flex flex-col gap-8 w-1/2 px-8 max-lg:w-full py-6;
+    }
+
+    .navbar {
+        @apply flex flex-row justify-between items-center bg-[#0a0a0a]/95 backdrop-blur-xl rounded-full p-4 w-full px-10 max-w-[1200px] mx-auto border border-neutral-800 glow-box;
+    }
+
+    .score-badge {
+        @apply flex flex-row items-center justify-center py-1 px-2 gap-4 rounded-[96px] glow-subtle;
+    }
+
+    .form-div {
+        @apply flex flex-col gap-2 w-full items-start;
+    }
+
+    .uplader-drag-area {
+        @apply relative p-8 text-center transition-all duration-700 cursor-pointer bg-[#0a0a0a]/70 rounded-2xl min-h-[208px] border-2 border-dashed border-neutral-700 hover:border-white hover:glow-box;
+    }
+    .uploader-selected-file {
+        @apply flex items-center justify-between p-3 bg-[#0a0a0a] rounded-2xl border border-neutral-800 glow-subtle;
+    }
+}
+
+@utility bg-gradient {
+    background: linear-gradient(to bottom, #1a1a1a 60%, #404040cc);
+}
+
+@utility text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-white via-neutral-300 to-neutral-500;
+}
+
+@utility gradient-hover {
+    @apply bg-gradient-to-b from-[#ffffff22] to-[#e5e5e533];
+}
+
+@utility primary-gradient {
+    background: linear-gradient(to bottom, #ffffff, #d4d4d4);
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.3), 0 0 60px rgba(255, 255, 255, 0.15);
+}
+
+@utility primary-gradient-hover {
+    background: linear-gradient(to bottom, #ffffff, #e5e5e5);
+    box-shadow: 0 0 40px rgba(255, 255, 255, 0.4), 0 0 80px rgba(255, 255, 255, 0.2);
+}
+
+@utility inset-shadow {
+    box-shadow: inset 0 0 12px 0 rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+}
+
+@utility glow-box {
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.1),
+    0 0 40px rgba(255, 255, 255, 0.05),
+    inset 0 0 20px rgba(255, 255, 255, 0.03);
+}
+
+@utility glow-box-hover {
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.15),
+    0 0 60px rgba(255, 255, 255, 0.08),
+    inset 0 0 30px rgba(255, 255, 255, 0.05);
+}
+
+@utility glow-button {
+    box-shadow: 0 0 25px rgba(255, 255, 255, 0.3),
+    0 0 50px rgba(255, 255, 255, 0.15),
+    0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+@utility glow-button-hover {
+    box-shadow: 0 0 35px rgba(255, 255, 255, 0.4),
+    0 0 70px rgba(255, 255, 255, 0.2),
+    0 4px 20px rgba(0, 0, 0, 0.4);
+    transform: translateY(-2px);
+}
+
+@utility glow-white {
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.2),
+    0 0 30px rgba(255, 255, 255, 0.1);
+}
+
+@utility glow-subtle {
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.08),
+    0 0 20px rgba(255, 255, 255, 0.04);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes glow-pulse {
+    0%, 100% {
+        box-shadow: 0 0 20px rgba(255, 255, 255, 0.1),
+        0 0 40px rgba(255, 255, 255, 0.05);
+    }
+    50% {
+        box-shadow: 0 0 30px rgba(255, 255, 255, 0.15),
+        0 0 60px rgba(255, 255, 255, 0.08);
+    }
+}
