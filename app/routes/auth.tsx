@@ -3,7 +3,7 @@ import {useEffect} from "react";
 import {useLocation, useNavigate} from "react-router";
 
 export const meta = () => ([
-    { title: 'Acent | Auth' },
+    { title: 'Ascent. | Auth' },
     { name: 'description', content: 'Log into your account' },
 ])
 
