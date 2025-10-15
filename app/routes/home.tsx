@@ -2,6 +2,12 @@ import type { Route } from "./+types/home";
 import Navbar from "~/components/Navbar";
 import ResumeCard from "~/components/ResumeCard";
 import {usePuterStore} from "~/lib/puter";
+
+// Define the KVItem type
+type KVItem = {
+  key: string;
+  value: string;
+};
 import {Link, useNavigate} from "react-router";
 import {useEffect, useState} from "react";
 
@@ -10,6 +16,10 @@ type Resume = {
   id: string;
   name: string;
   value: string;
+  companyName: string;
+  jobTitle: string;
+  feedback: { overallScore: number };
+  imagePath: string;
 };
 
 export function meta({}: Route.MetaArgs) {
@@ -35,9 +45,13 @@ export default function Home() {
 
       const resumes = (await kv.list('resume:*', true)) as KVItem[];
 
-      const parsedResumes = resumes?.map((resume) => (
-          JSON.parse(resume.value) as Resume
-      ))
+      const parsedResumes = resumes?.map((resume) => {
+        const parsed = JSON.parse(resume.value);
+        return {
+          ...parsed,
+          feedback: { overallScore: Number(parsed.feedback) }, // Adjust feedback to match expected type
+        } as Resume;
+      });
 
       setResumes(parsedResumes || []);
       setLoadingResumes(false);
